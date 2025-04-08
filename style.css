@@ -86,9 +86,11 @@ main {
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  transition: all 0.3s ease-in-out;
   gap: 1.5rem;
   width: 100%;
-  min-height: 400px;
+  height: auto;
+  min-height: 500px;
   max-width: 1200px;
   padding: 0 1rem;
 }
