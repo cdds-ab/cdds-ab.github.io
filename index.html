@@ -2,130 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>CDDS AB</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: 'Roboto Condensed', sans-serif;
       background: url('images/back.jpg') no-repeat center center fixed;
       background-size: cover;
       filter: grayscale(20%) brightness(90%);
-      color: #333;
+      color: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      box-sizing: border-box;
     }
+
     header {
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 1.5rem 2rem;
+      padding: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
     }
+
     header img {
-      max-width: 500px;
+      max-width: 480px;
       height: auto;
       filter: drop-shadow(0 6px 12px rgba(0,0,0,0.8));
     }
-    header a {
-      color: rgba(255, 255, 255, 0.6);
-      text-decoration: none;
-      font-size: 1.2rem;
-      text-align: center;
-      padding: 0.5rem 1rem;
+
+    header .qualities {
+      text-align: right;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.4;
     }
+
     main {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 3rem 1rem;
+      padding: 2rem 1rem;
     }
+
     .intro {
       background-color: rgba(0, 0, 0, 0.6);
-      color: rgba(255,255,255,1.0);
+      color: #fff;
+      width: 100%;
       max-width: 960px;
-      padding: 2.5rem;
+      padding: 2rem;
       border-radius: 16px;
       box-shadow: 0 6px 16px rgba(200,200,0,0.5);
       text-align: center;
       border: 1px solid rgba(200,200,200,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 2rem;
     }
-    .intro:hover {
-      transform: scale(1.03);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
+
     .intro h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     .intro p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
+
     .services {
-      color: rgba(255,255,255,1.0);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1280px;
-      margin: 3rem auto;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1200px;
       padding: 0 1rem;
     }
+
     .service-box {
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 2rem 1.5rem;
+      padding: 1.5rem;
       border-radius: 16px;
       box-shadow: 0 6px 16px rgba(200,200,0,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
-    .service-box:hover {
-      transform: scale(1.03);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-    .service-box img {
-      height: 48px;
-      margin-bottom: 1rem;
-      opacity: 0.85;
-    }
+
     .service-box h2 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
+
     footer {
       background-color: rgba(0, 0, 0, 0.5);
-      font-size: 0.7rem;
-      letter-spacing: 0.3px;
+      font-size: 0.75rem;
       color: rgba(255, 255, 255, 0.9);
       text-align: center;
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem;
     }
-    @media (max-width: 600px) {
-      .services {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-      }
-      .service-box {
-        padding: 1.5rem 1rem;
-      }
+
+    footer a {
+      color: rgba(255,255,0,0.9);
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
       header {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
       }
+
       header img {
+        max-width: 80%;
         margin-bottom: 1rem;
       }
+
       .intro h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
+
       .intro p {
         font-size: 1rem;
       }
@@ -134,14 +132,12 @@
 </head>
 <body>
   <header>
-    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap;">
-      <img src="images/cdds_logo_no_background.png" alt="CDDS AB Logo">
-      <div style="text-align: right; font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.4;">
-        <div>reliable.</div>
-        <div>experienced.</div>
-        <div>versatile.</div>
-        <div>open.</div>
-      </div>
+    <img src="images/cdds_logo_no_background.png" alt="CDDS AB Logo">
+    <div class="qualities">
+      <div>reliable.</div>
+      <div>experienced.</div>
+      <div>versatile.</div>
+      <div>open.</div>
     </div>
   </header>
 
@@ -151,32 +147,32 @@
       <p>
         We provide broad expertise in Continuous Delivery, DevOps, and automated solutions for modern software teams.
         CDDS AB helps you accelerate your development and delivery process — safer, faster, and more reliable.
-    </p>
+      </p>
     </div>
 
     <div class="services">
       <div class="service-box">
         <h2>Continuous Integration & Deployment Automation</h2>
-        Efficient pipelines and reliable deployments — automated and transparent.
+        <p>Efficient pipelines and reliable deployments — automated and transparent.</p>
       </div>
       <div class="service-box">
         <h2>Legacy Code & Software Reengineering</h2>
-        Consulting & development for sustainable transformation of existing systems.
+        <p>Consulting & development for sustainable transformation of existing systems.</p>
       </div>
       <div class="service-box">
         <h2>Infrastructure Automation</h2>
-        Infrastructure as Code, cloud-native approaches & scalable provisioning.
+        <p>Infrastructure as Code, cloud-native approaches & scalable provisioning.</p>
       </div>
       <div class="service-box">
         <h2>Consulting & Development</h2>
-        Technical sparring, concept design & implementation based on DevOps principles.
+        <p>Technical sparring, concept design & implementation based on DevOps principles.</p>
       </div>
     </div>
   </main>
 
   <footer>
-    CDDS - Continuous Delivery and DevOps Services AB | Org.nr: 559419-6593 | Krångvägen 40, 883 70 Ramsele | <a href="mailto:info@cdds.se" style="color: rgba(255,255,0,0.9); text-decoration: none;">info@cdds.se</a>
+    CDDS - Continuous Delivery and DevOps Services AB | Org.nr: 559419-6593 | Krångvägen 40, 883 70 Ramsele | 
+    <a href="mailto:info@cdds.se">info@cdds.se</a>
   </footer>
 </body>
 </html>
-
