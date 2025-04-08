@@ -27,7 +27,7 @@ header img {
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.8));
 }
 
-.qualities {
+header .qualities {
   text-align: right;
   font-size: 0.9rem;
   color: rgba(255,255,255,0.7);
@@ -64,6 +64,11 @@ main {
 .intro p {
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+.intro a {
+  color: rgba(255,255,0,0.9);
+  text-decoration: none;
 }
 
 .services {
@@ -138,3 +143,4 @@ footer a {
     margin: 0 auto 2rem auto;
   }
 }
+
