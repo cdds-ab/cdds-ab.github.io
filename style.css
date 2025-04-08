@@ -11,7 +11,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: url('/images/back.webp') no-repeat center center fixed;
   background-size: cover;
   filter: grayscale(20%) brightness(90%);
@@ -32,8 +32,10 @@ header {
 }
 
 header img {
-  max-width: 600px;
-  height: auto;
+  width: 600px;
+  height: 150px;
+  display: block;
+  aspect-ratio: 4 / 1; /* optional, aber hilft */
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.8));
 }
 
@@ -86,6 +88,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   width: 100%;
+  min-height: 400px;
   max-width: 1200px;
   padding: 0 1rem;
 }
