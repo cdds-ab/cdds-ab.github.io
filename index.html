@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/cdds_logo.webp" type="image/webp">
   <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
 <style>
@@ -37,8 +38,6 @@
   header img {
     max-width: 600px;
     height: auto;
-    width: 600;
-    height: 150;
     filter: drop-shadow(0 6px 12px rgba(0,0,0,0.8));
   }
 
@@ -157,7 +156,7 @@
 </head>
 <body>
   <header>
-    <img src="images/cdds_logo.webp" alt="CDDS AB Logo – DevOps Beratung aus Schweden" width="600" height="150">
+    <img src="images/cdds_logo.webp" alt="CDDS AB Logo – DevOps Beratung aus Schweden" width="600" height="150" loading="eager" fetchpriority="high">
     <div class="qualities">
       <div>reliable.</div>
       <div>experienced.</div>
